@@ -333,7 +333,7 @@ if(isset($_POST['submit'])){
 
                 <nav class="classy-navbar justify-content-between" id="conferNav">
 
-                    <a class="nav-brand" href="./comingsoon.html"><img src="./img/core-img/EDC WHITE-1.PNG" alt="" width="120" height="70"></a>
+                    <a class="nav-brand" href="./comingsoon.html"><img src="./img/core-img/esummit.png" alt="" width="280" height="300"></a>
 
                     <div class="classy-navbar-toggler">
                         <span class="navbarToggler"><span></span><span></span><span></span></span>
