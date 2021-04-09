@@ -1,3 +1,3 @@
 <?php
-$dbcon = mysqli_connect('us-cdbr-east-02.cleardb.com','b7582cade56e3f','d0dde5ce','heroku_818476126af069f');
+$dbcon = mysqli_connect('us-cdbr-east-03.cleardb.com','b4ac290d184b8f','b555a0a8','heroku_470085198f84c45');
 ?>
