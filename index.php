@@ -1,3 +1,57 @@
+<?php
+if(isset($_POST['submit'])){
+	include_once('db_connect.php');
+	require 'phpmailer/PHPMailerAutoload.php';
+
+	$email = $_POST['email'];
+
+
+
+	$query = "INSERT INTO data values ( '$email')";
+
+	mysqli_query($dbcon,$query);
+	$message = mysqli_error($dbcon);
+	$msg="";
+	if($message == '')
+	{ 		
+			$mail=new PHPMailer;
+			$mail->isSMTP();
+			$mail->Host='smtp.gmail.com;';
+			$mail->SMTPAuth=true;
+			$mail->Username = 'tuedcell@gmail.com';
+			$mail->Password = 'ExecutiveBoard2020-21';
+			$mail->SMTPSecure = 'tls';
+			$mail->Port = 587;
+			$mail->setFrom('tuedcell@gmail.com', 'EDC-TIET');
+			$mail->addAddress($email);
+			$mail->addReplyTo('tuedcell@gmail.com', 'EDC-TIET');
+			$mail->isHTML(true);
+			$mail->Subject = 'EDC Recruitments';
+			$mail->Body    = '<b>Dear Applicant,</b><br><br>
+
+		Thank you for applying for to be part of the Entrepreneurship Development Cell. You have taken your first step towards an Entrepreneurial dream and success.<br>
+
+		We will get back to you shortly with the details of the first round of selection.<br><br>
+
+		<b>Regards,</b><br>
+		<b>Team EDC</b>';
+				$mail->AltBody = 'Dear Applicant,
+
+		Thank you for applying for to be part of the Entrepreneurship Development Cell. You have taken your first step towards an Entrepreneurial dream and success.
+
+		We will get back to you shortly with the details of the first round of selection.
+
+		Regards,
+		Team EDC';
+				$mail->send();
+				$msg="You have been successfully registered.";
+	}
+	else{
+		echo $message;
+	}
+}
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -420,7 +474,6 @@ s
 
 
 	<section class="about-us-countdown-area section-padding-100-0" id="about">
-		<form method="post" action="#">
 		<div class="countdown-up-area">
 			<div class="container">
 				<div class="row align-items-center">
@@ -457,6 +510,7 @@ s
 							All the future Zuckerberg's gear up for the biggest entrepreneurial event of the year.
 							Click on the button below to receive regular information and not miss any opportunity</p>
 						<br>
+						<form method="post" action="">
 						<div class="input-group" style="">
 							<input type="text" name="email" value="" required="required" placeholder="Email" />
 							<label for="text-1542372332072" style="margin-bottom: 0;">Email</label>
@@ -464,8 +518,12 @@ s
 						</div>
 
 						<button name="submit" value="submit" href="#" class=" confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Subscribe Now <i
-								class="zmdi zmdi-long-arrow-right"></i></button>
+								class="zmdi zmdi-long-arrow-right"></i></button></form>
+
+						<div class="#"><?php if(isset($msg)){ echo $msg; } ?></div>
+
 					</div>
+
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
@@ -474,27 +532,7 @@ s
 				</div>
 			</div>
 		</div>
-	</form>
-	<?php
-    $message = "";
-    if(isset($_POST['submit'])){ 
-      $email = $_POST['email'];
-      $message = "Success! You have been registered ";
-      $server = 'localhost';
-      $username = 'root';
-      $password = '';
-      $database = 'esummit';
-      $dbcon = mysqli_connect($server, $username, $password, $database);
-
-      if ($dbcon->connect_error) {
-          die("Connection failed: " . $dbcon->connect_error);
-        }
-
-      $query = "INSERT INTO esummit values ('$email')";
-      mysqli_query($dbcon,$query);
-      echo $message; 
-    }        
-  ?>
+	
 	</section>
 
 
