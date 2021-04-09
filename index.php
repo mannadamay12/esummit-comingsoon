@@ -493,7 +493,7 @@ if(isset($_POST['submit'])){
                             All the future Zuckerberg's gear up for the biggest entrepreneurial event of the year.
                             Click on the button below to receive regular information and not miss any opportunity</p>
                         <br>
-                        <form method="post" action="undex.php">
+                        <form method="post" action="index.php">
                             <div class="input-group" style="">
                                 <input type="text" name="email" value="" required="required" placeholder="Email" />
                                 <label for="text-1542372332072" style="margin-bottom: 0;">Email</label>
