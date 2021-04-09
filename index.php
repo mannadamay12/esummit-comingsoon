@@ -493,14 +493,14 @@ if(isset($_POST['submit'])){
                             All the future Zuckerberg's gear up for the biggest entrepreneurial event of the year.
                             Click on the button below to receive regular information and not miss any opportunity</p>
                         <br>
-                        <form method="post" action="#">
+                        <form method="post" action="undex.php">
                             <div class="input-group" style="">
                                 <input type="text" name="email" value="" required="required" placeholder="Email" />
                                 <label for="text-1542372332072" style="margin-bottom: 0;">Email</label>
                                 <!-- <div class="req-mark">!</div> -->
                             </div>
 
-                            <button name="submit" value="submit" href="#" class=" confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Subscribe Now <i class="zmdi zmdi-long-arrow-right"></i></button>
+                            <button name="submit" value="submit" href="index.php" class=" confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Subscribe Now <i class="zmdi zmdi-long-arrow-right"></i></button>
                         </form>
                     </div>
 
