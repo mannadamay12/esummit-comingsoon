@@ -25,7 +25,7 @@ SECRET_KEY = 'ex$snlsm@9!$n-ey#0az6bqzca+)5m)ns1jz=_0ov^s674h2!p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['esummit2021.herokuapp.com','127.0.0.1']
 
 
 # Application definition
