@@ -13,7 +13,7 @@ def subscribe(request):
 			email = form.cleaned_data.get('email')
 			form.save()
 			send_mail(
-                        'Test Mail', 
+                        'E-Summit 21', 
                         f"""Dear Student,
 Greetings from Entrepreneurship Development Cell, TIET!
 We would like to thank you for filling out the registration form and are delighted to announce the start of our flagship event Pitchers 5.0 on 8th November 2020.
@@ -29,7 +29,7 @@ Good luck.
 Regards,
 EDC TIET
                         """, 
-                        'pitchers@edctiet.com',
+                        'esummit@edctiet.com',
                         [email],
                     )
 			return redirect('subscribe')
