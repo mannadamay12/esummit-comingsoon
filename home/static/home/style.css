@@ -725,7 +725,7 @@ input:required {
       @media only screen and (max-width: 767px) {
         .classy-nav-container .classy-navbar .classynav ul li a {
           font-size: 14px;
-          color: #111343; }
+          color: white; }
           .classy-nav-container .classy-navbar .classynav ul li a:hover, .classy-nav-container .classy-navbar .classynav ul li a:focus {
             color: #FCFF00; } }
     .classy-nav-container .classy-navbar .classynav ul li.cn-dropdown-item ul li a, .classy-nav-container .classy-navbar .classynav ul li.megamenu-item ul li a {
