@@ -1,1 +1,1 @@
-web: gunicorn esummit-cominsoon.wsgi
+web: gunicorn esummit-comingsoon.wsgi
