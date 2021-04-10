@@ -14,11 +14,15 @@ def subscribe(request):
 			form.save()
 			send_mail(
                         'E-Summit 21', 
-                        f"""Dear Student,
-Greetings from EDC TIET!
-We hope you’re excited and all prepared for E-Summit 2021. You have successfully subscribed for the enthralling event and we are delighted to have you onboard with us. Brace yourselves for the jam-packed events full of thrill and adventure. Get ready for a breathtaking experience like never before.
-Regards,
-EDC TIET
+                        f"""Dear Participant,,
+I hope this email finds you in the best of your health. We at EDC, thank you for signing up for E-Summit'21. We are extremely excited and glad that you could join us on this journey to revive the hustle.
+
+With this fiesta around the corner, you will get your regular updates on events and all other further information on the mail itself.
+
+We hope you savor this journey of new challenges, unlimited ideas, and untiring zeal.
+
+Cheers,
+Team EDC
                         """, 
                         'esummit@edctiet.com',
                         [email],
