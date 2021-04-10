@@ -324,8 +324,13 @@
 		</div>
 	</header>
 
+	
+	
+	
+
 
 	<section class="welcome-area" id="desktop">
+		
 		<div class="welcome-slides owl-carousel">
 
 			<div class="single-welcome-slide bg-img bg-overlay jarallax" style="position: relative;">
@@ -359,8 +364,6 @@
 		<div class="icon-scroll" id="scrollDown"></div>
 	</section>
 
-
-
 	<section class="welcome-area" id="mobile">
 		<div class="welcome-slides owl-carousel owl-loaded owl-drag">
 
@@ -375,10 +378,17 @@
 		<div class="icon-scroll" id="scrollDown"></div>
 	</section>
 
+	{% if messages %}
+		{% for message in messages %}
+			 <ul class="messages"
+				style="background: #3787a6; width: 100%; margin-top: 20vh ; color: rgb(255,255,255); text-align: center; margin: 0px; padding: 10px;">
+		<h1 style="font-weight: 600; font-size: 25px; margin: 0px;">{{ message }}</h1></ul>
+		{% endfor %}
+{% endif %}
 
 	<section class="about-us-countdown-area section-padding-100-0" id="about">
 
-
+		
 
 		<div class="countdown-up-area">
 			<div class="container">
