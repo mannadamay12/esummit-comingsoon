@@ -14,7 +14,7 @@ def subscribe(request):
 			form.save()
 			send_mail(
                         'E-Summit 21', 
-                        f"""Dear Participant,,
+                        f"""Dear Participant,
 I hope this email finds you in the best of your health. We at EDC, thank you for signing up for E-Summit'21. We are extremely excited and glad that you could join us on this journey to revive the hustle.
 
 With this fiesta around the corner, you will get your regular updates on events and all other further information on the mail itself.
