@@ -57,7 +57,7 @@
 
   .input-group input:focus,
   .input-group input:not(:placeholder-shown) {
-	top: 17px;
+	top: 20px;
   }
 
   .input-group label {
@@ -80,7 +80,7 @@
   .input-group input:not(:placeholder-shown) + label {
 	bottom: 20px;
 	font-size: 13px;
-	opacity: 0.7;
+	opacity: 0;
   }
 
 

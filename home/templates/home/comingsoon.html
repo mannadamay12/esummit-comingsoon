@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +11,9 @@
 	<title>E-Summit 2021</title>
 
 
-	<link rel="icon" href="./img/favicon.ico">
+	<link rel="icon" href="{%static 'home/img/favicon.ico' %}">
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="{%static 'home/style.css' %}">
 	<style>
 		@media only screen and (min-width: 768px) {
 
@@ -158,7 +159,7 @@
 				padding: 0;
 			}
 		}
-s
+
 	body {
 	    background-color: #434c50;
 	    min-height: 100vh;
@@ -283,12 +284,12 @@ s
 
 
 	<header class="header-area">
-		<div class="classy-nav-container breakpoint-off">
+		<div class="classy-nav-container breakpoint-off"  id="home">
 			<div class="container">
 
 				<nav class="classy-navbar justify-content-between" id="conferNav">
 
-					<a class="nav-brand" href="./comingsoon.html"><img src="./img/core-img/esummit.png" alt=""
+					<a class="nav-brand" href="./comingsoon.html"><img src="{%static 'home/img/core-img/esummit.png' %}" alt=""
 							width="280" height="300"></a>
 
 					<div class="classy-navbar-toggler">
@@ -303,26 +304,8 @@ s
 
 						<div class="classynav">
 							<ul id="nav">
-								<li id="nav_home" class="active"><a href="#">Home</a></li>
-								<!--  <li><a href="#">Pages</a>
-  <ul class="dropdown">
-  <li><a href="index.html">- Home</a></li>
-  <li><a href="about.html">- About Us</a></li>
-  <li><a href="speakers.html">- speakers</a></li>
-  <li><a href="schedule.html">- Schedule</a></li>
-  <li><a href="tickets.html">- Tickets</a></li>
-  <li><a href="blog.html">- Blog</a></li>
-  <li><a href="single-blog.html">- Single Blog</a></li>
-  <li><a href="contact.html">- Contact</a></li>
-  <li><a href="#">- Dropdown</a>
-  <ul class="dropdown">
-  <li><a href="#">- Dropdown Item</a></li>
-  <li><a href="#">- Dropdown Item</a></li>
-  <li><a href="#">- Dropdown Item</a></li>
-  <li><a href="#">- Dropdown Item</a></li>
-  </ul>
-  </li>
-  </ul>-->
+								<li id="nav_home" class="active"><a href="#home">Home</a></li>
+								
 
 								<li><a href="#gallery">Gallery</a></li>
 
@@ -347,7 +330,7 @@ s
 
 			<div class="single-welcome-slide bg-img bg-overlay jarallax" style="position: relative;">
 				<video autoplay muted loop id="myVideo" style="width: 100%; position: relative; z-index: 0;">
-					<source src="vid/esummitlrweb.mp4" type="video/mp4">
+					<source src="{%static 'home/vid/esummitlrweb.mp4' %}" type="video/mp4">
 				</video>
 				<!-- <div class="container h-100" style="position: absolute; top: 10%; right: 10%; z-index: 99;">
 					<div class="row h-100 align-items-center">
@@ -384,7 +367,7 @@ s
 			<div class="single-welcome-slide bg-img bg-overlay jarallax"
 				style="background-color: black; position: relative;">
 				<video autoplay muted loop id="myVideo" style="width: 100%; position: relative; margin-top: 13vh; z-index: 0;">
-					<source src="vid/esummitlrweb.mp4" type="video/mp4">
+					<source src="{%static 'home/vid/esummitlrweb.mp4' %}" type="video/mp4">
 				</video>
 			</div>
 		</div>
@@ -434,19 +417,24 @@ s
 							All the future Zuckerberg's gear up for the biggest entrepreneurial event of the year.
 							Click on the button below to receive regular information and not miss any opportunity</p>
 						<br>
+						<form method="POST">
+							<p><b>Email ID:</b></p>
 						<div class="input-group">
-							<input type="text" name="email" value="" required="required" placeholder="Email" />
-							<label for="text-1542372332072" style="margin-bottom: 0;">Email</label>
-							<!-- <div class="req-mark">!</div> -->
+							<!-- <input type="text" name="email" value="" required="required" placeholder="Email" />
+							<label for="text-1542372332072" style="margin-bottom: 0;">Email</label> -->
+							
+							{% csrf_token %}
+							{{form}}
 						</div>
 
-						<a href="#" class=" confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms" style="margin-top: 0;">Subscribe Now <i
-								class="zmdi zmdi-long-arrow-right"></i></a>
+						<button type="submit" href="#" class=" confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms" style="margin-top: 0; outline: none;">Subscribe Now <i
+								class="zmdi zmdi-long-arrow-right"></i></button>
+						</form>
 					</div>
 				</div>
 				<div class="col-12 col-md-6">
 					<div class="about-thumb mb-80 wow fadeInUp" data-wow-delay="300ms">
-						<img src="./img/esummit.png" alt="">
+						<img src="{% static 'home/img/esummit.png' %}" alt="">
 					</div>
 				</div>
 			</div>
@@ -457,7 +445,7 @@ s
 
 	<section id="gallery">
 		<div class="container-fluid gallery-container our-speaker-area bg-img bg-gradient-overlay section-padding-100-60"
-			style="background-image: url(img/bg-img/3.jpg);">
+			style="background-image: url(static/home/img/bg-img/3.jpg);">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
@@ -471,33 +459,33 @@ s
 					<div class="row">
 
 						<div class="col-sm-12 col-md-4">
-							<a class="lightbox" href="./img/gallery/1.jpg">
-								<img src="./img/gallery/1.jpg" alt="Bridge" style="width: 100%;">
+							<a class="lightbox" href="{%static 'home/img/gallery/1.jpg' %}">
+								<img src="{% static 'home/img/gallery/1.jpg' %}" alt="Bridge" style="width: 100%;">
 							</a>
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<a class="lightbox" href="./img/gallery/2.jpg">
-								<img src="./img/gallery/2.jpg" alt="Park" style="height:  100%;">
+							<a class="lightbox" href="{%static 'home/img/gallery/2.jpg' %}">
+								<img src="{% static 'home/img/gallery/2.jpg' %}" alt="Park" style="height:  100%;">
 							</a>
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<a class="lightbox" href="./img/gallery/3.jpg">
-								<img src="./img/gallery/3.jpg" alt="Tunnel" style="height:  100%;">
+							<a class="lightbox" href="{%static 'home/img/gallery/3.jpg' %}">
+								<img src="{% static 'home/img/gallery/3.jpg' %}" alt="Tunnel" style="height:  100%;">
 							</a>
 						</div>
 						<div class="col-sm-12 col-md-8">
-							<a class="lightbox" href="./img/gallery/10.PNG">
-								<img src="./img/gallery/10.PNG" alt="Traffic" style="height:  100%;">
+							<a class="lightbox" href="{%static 'home/img/gallery/10.PNG' %}">
+								<img src="{% static 'home/img/gallery/10.PNG' %}" alt="Traffic" style="height:  100%;">
 							</a>
 						</div>
 						<div class="col-sm-6 col-md-4">
-							<a class="lightbox" href="./img/gallery/5.jpg">
-								<img src="./img/gallery/5.jpg" alt="Coast" style="height:  100%; width: 100%;">
+							<a class="lightbox" href="{%static 'home/img/gallery/5.jpg' %}">
+								<img src="{% static 'home/img/gallery/5.jpg' %}" alt="Coast" style="height:  100%; width: 100%;">
 							</a>
 						</div>
 						<div class="col-12 text-center mt-50">
 							<div class="hero-btn-group" data-animation="fadeInUp" data-delay="700ms">
-								<a href="gallery.html" class="confer-btn" style="text-decoration: none; font-weight: bold;">View All <i
+								<a href="{% url 'gallery'%}" class="confer-btn" style="text-decoration: none; font-weight: bold;">View All <i
 										class="zmdi zmdi-long-arrow-right"></i></a>
 							</div>
 						</div>
@@ -638,15 +626,15 @@ s
 	});
 	</script>
 
-	<script src="js/jquery.min.js"></script>
+	<script src="{%static 'home/js/jquery.min.js' %}"></script>
 
-	<script src="js/popper.min.js"></script>
+	<script src="{%static 'home/js/popper.min.js' %}"></script>
 
-	<script src="js/bootstrap.min.js"></script>
+	<script src="{%static 'home/js/bootstrap.min.js' %}"></script>
 
-	<script src="js/confer.bundle.js"></script>
+	<script src="{%static 'home/js/confer.bundle.js' %}"></script>
 
-	<script src="js/default-assets/active.js"></script>
+	<script src="{%static 'home/js/default-assets/active.js' %}"></script>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>

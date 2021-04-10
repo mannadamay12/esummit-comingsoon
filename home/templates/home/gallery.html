@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,9 @@
 
 <title>E-Summit</title>
 
-	<link rel="icon" href="./img/favicon.ico">
+	<link rel="icon" href="{% static 'home/img/favicon.ico' %}">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="{% static 'home/style.css' %}">
 
 <style type="text/css">
 	body {
@@ -143,7 +144,7 @@
 
 				<nav class="classy-navbar justify-content-between" id="conferNav">
 
-					<a class="nav-brand" href="./comingsoon.html"><img src="./img/core-img/esummit.png" alt=""
+					<a class="nav-brand" href="./comingsoon.html"><img src="{%static 'home/img/core-img/esummit.png' %}" alt=""
 							width="120" height="70"></a>
 
 					<div class="classy-navbar-toggler">
@@ -158,9 +159,9 @@
 
 						<div class="classynav">
 							<ul id="nav">
-								<li><a href="./comingsoon.html">Home</a></li>
+								<li><a href="{% url 'subscribe' %}">Home</a></li>
 
-								<li id="nav_gallery" class="active" ><a href="./gallery.html">Gallery</a></li>
+								<li id="nav_gallery" class="active" ><a href="{% url 'gallery' %}">Gallery</a></li>
 
 								<!-- <li><a href="blog.html">Blog</a></li> -->
 								<li id="nav_contact" ><a href="#contact">Contact</a></li>
@@ -176,9 +177,7 @@
 			</div>
 		</div>
 	</header>
-
-
-<section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url(img/gallery/12.png);">
+<section class="breadcrumb-area bg-img bg-gradient-overlay jarallax" style="background-image: url(static/home/img/gallery/12.png);">
 <div class="container h-100">
 <div class="row h-100 align-items-center">
 <div class="col-12">
@@ -206,53 +205,53 @@
         <div class="row">
 
             <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="./img/gallery/1.jpg">
-                    <img src="./img/gallery/1.jpg" alt="Bridge" style="width: 100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/1.jpg' %}">
+                    <img src="{% static 'home/img/gallery/1.jpg' %}" alt="Bridge" style="width: 100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/2.jpg">
-                    <img src="./img/gallery/2.jpg" alt="Park" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/2.jpg' %}">
+                    <img src="{% static 'home/img/gallery/2.jpg' %}" alt="Park" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/3.JPG">
-                    <img src="./img/gallery/3.JPG" alt="Tunnel" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/3.JPG' %}">
+                    <img src="{% static 'home/img/gallery/3.JPG' %}" alt="Tunnel" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-12 col-md-8">
-                <a class="lightbox" href="./img/gallery/10.PNG">
-                    <img src="./img/gallery/10.PNG" alt="Traffic" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/10.PNG' %}">
+                    <img src="{% static 'home/img/gallery/10.PNG' %}" alt="Traffic" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/5.jpg">
-                    <img src="./img/gallery/5.jpg" alt="Coast" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/5.jpg' %}">
+                    <img src="{% static 'home/img/gallery/5.jpg' %}" alt="Coast" style="height:  100%;">
                 </a>
             </div> 
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/4.JPG">
-                    <img src="./img/gallery/4.JPG" alt="Rails" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/4.JPG' %}">
+                    <img src="{% static 'home/img/gallery/4.JPG' %}" alt="Rails" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/7.JPG">
-                    <img src="./img/gallery/7.JPG" alt="Rails" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/7.JPG' %}">
+                    <img src="{% static 'home/img/gallery/7.JPG' %}" alt="Rails" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/8.JPG">
-                    <img src="./img/gallery/8.JPG" alt="Rails" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/8.JPG' %}">
+                    <img src="{% static 'home/img/gallery/8.JPG' %}" alt="Rails" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="./img/gallery/6.jpg">
-                    <img src="./img/gallery/6.jpg" alt="Rails" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/6.jpg' %}">
+                    <img src="{% static 'home/img/gallery/6.jpg' %}" alt="Rails" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-6 col-md-8">
-                <a class="lightbox" href="./img/gallery/12.png">
-                    <img src="./img/gallery/12.png" alt="Rails" style="height:  100%;">
+                <a class="lightbox" href="{% static 'home/img/gallery/12.png' %}">
+                    <img src="{% static 'home/img/gallery/12.png' %}" alt="Rails" style="height:  100%;">
                 </a>
             </div>
         </div>
@@ -371,15 +370,15 @@
 	  };
 	});
 </script>
-<script src="js/jquery.min.js"></script>
+<script src="{%static 'home/js/jquery.min.js' %}"></script>
 
-<script src="js/popper.min.js"></script>
+	<script src="{%static 'home/js/popper.min.js' %}"></script>
 
-<script src="js/bootstrap.min.js"></script>
+	<script src="{%static 'home/js/bootstrap.min.js' %}"></script>
 
-<script src="js/confer.bundle.js"></script>
+	<script src="{%static 'home/js/confer.bundle.js' %}"></script>
 
-<script src="js/default-assets/active.js"></script>
+	<script src="{%static 'home/js/default-assets/active.js' %}"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 <script>

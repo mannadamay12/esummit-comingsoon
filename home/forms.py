@@ -3,5 +3,5 @@ from django import forms
 
 class EmailForm(forms.ModelForm):
 	class Meta():
-		model = Subscribe
+		model = Subscriber
 		fields = ['email']
