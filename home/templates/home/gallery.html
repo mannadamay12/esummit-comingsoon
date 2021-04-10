@@ -99,6 +99,20 @@
 	        padding: 0;
 	    }
 	}
+	.navlogo{
+			width: 200px; 
+			height: 150px;
+		}
+
+	@media(max-width: 768px) {
+	    body {
+	        padding: 0;
+	    }
+		.navlogo {
+			width: 195px;
+			height: 130px;
+		}
+	}
 </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -145,7 +159,8 @@
 				<nav class="classy-navbar justify-content-between" id="conferNav">
 
 					<a class="nav-brand" href="./comingsoon.html"><img src="{%static 'home/img/core-img/esummit.png' %}" alt=""
-							width="120" height="70"></a>
+						class="navlogo"></a>
+					
 
 					<div class="classy-navbar-toggler">
 						<span class="navbarToggler"><span></span><span></span><span></span></span>

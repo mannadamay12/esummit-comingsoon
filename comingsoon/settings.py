@@ -131,4 +131,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'queries.edctiet@gmail.com'
 EMAIL_HOST_PASSWORD = 'eczqtysruacoqqob'
-DEFAULT_FROM_EMAIL = 'pitchers@edctiet.com'
+DEFAULT_FROM_EMAIL = 'esummit@edctiet.com'
