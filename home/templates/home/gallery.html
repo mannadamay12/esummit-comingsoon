@@ -99,6 +99,20 @@
 	        padding: 0;
 	    }
 	}
+	.navlogo{
+			width: 200px; 
+			height: 150px;
+		}
+
+	@media(max-width: 768px) {
+	    body {
+	        padding: 0;
+	    }
+		.navlogo {
+			width: 195px;
+			height: 130px;
+		}
+	}
 </style>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -144,8 +158,9 @@
 
 				<nav class="classy-navbar justify-content-between" id="conferNav">
 
-					<a class="nav-brand" href="{% url 'subscribe' %}"><img src="{%static 'home/img/core-img/esummit.png' %}" alt=""
-							width="120" height="70"></a>
+					<a class="nav-brand" href="./comingsoon.html"><img src="{%static 'home/img/core-img/esummit.png' %}" alt=""
+						class="navlogo"></a>
+					
 
 					<div class="classy-navbar-toggler">
 						<span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -216,7 +231,7 @@
             </div>
             <div class="col-sm-6 col-md-4">
                 <a class="lightbox" href="{% static 'home/img/gallery/3.JPG' %}">
-                    <img src="{% static 'home/img/gallery/3.JPG' %}" alt="Tunnel" style="height:  100%;">
+                    <img src="{% static 'home/img/gallery/3.png' %}" alt="Tunnel" style="height:  100%;">
                 </a>
             </div>
             <div class="col-sm-12 col-md-8">
