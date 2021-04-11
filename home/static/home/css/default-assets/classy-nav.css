@@ -150,7 +150,10 @@
     width: 26px;
     height: 26px;
     cursor: pointer;
-    position: relative; }
+    position: relative;
+    background-color: #FCFF00;
+    border-radius: 50%;
+   }
     .classycloseIcon .cross-wrap span {
       position: absolute;
       display: block;

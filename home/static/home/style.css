@@ -703,7 +703,7 @@ input:required {
     padding: 0; }
     @media only screen and (max-width: 767px) {
       .classy-nav-container .classy-navbar .nav-brand {
-        max-width: 90px;
+        max-width: 150px;
         margin-right: 15px; } }
     .classy-nav-container .classy-navbar .classynav ul li a {
       font-size: 16px;
@@ -785,8 +785,8 @@ input:required {
     left: 50%;
     bottom: 40px;
     margin-left: -13px;
-    -webkit-box-shadow: inset 0 0 0 2px #ffffff;
-    box-shadow: inset 0 0 0 2px #ffffff;
+    -webkit-box-shadow: inset 0 0 0 2px #FCFF00;
+    box-shadow: inset 0 0 0 2px #FCFF00;
     border-radius: 25px;
     opacity: 0.75;
     cursor: pointer; }
@@ -796,7 +796,7 @@ input:required {
       content: '';
       width: 6px;
       height: 6px;
-      background: #ffffff;
+      background: #FCFF00;
       left: 50%;
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
