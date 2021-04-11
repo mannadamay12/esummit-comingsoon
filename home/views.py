@@ -13,23 +13,18 @@ def subscribe(request):
 			email = form.cleaned_data.get('email')
 			form.save()
 			send_mail(
-                        'Test Mail', 
-                        f"""Dear Student,
-Greetings from Entrepreneurship Development Cell, TIET!
-We would like to thank you for filling out the registration form and are delighted to announce the start of our flagship event Pitchers 5.0 on 8th November 2020.
-Kindly make the registration payment of Rs.100 by any of the following methods:
-    1. Using PayTM - Pay to - 8264245458
-    2. Using Google Pay - Pay to - 8264245458
-    3. Using UPI - Pay to - 8264245458
-You must reply to this email with the screenshot of the transaction page to complete your registration. The last date to make the payment is 6th November. If you fail to make the payment by the date mentioned, you will not be allowed to access the dashboard for team formation and your registration will be cancelled.
-Join our official discord channel for further updates and news.
-Discord link- https://discord.gg/5qeZp9N2SK
-Psych yourself up as it’s time to research, ideate and explore the arena of emerging startups.
-Good luck.
-Regards,
-EDC TIET
+                        'E-Summit 21', 
+                        f"""Dear Participant,
+I hope this email finds you in the best of your health. We at EDC, thank you for signing up for E-Summit'21. We are extremely excited and glad that you could join us on this journey to revive the hustle.
+
+With this fiesta around the corner, you will get your regular updates on events and all other further information on the mail itself.
+
+We hope you savor this journey of new challenges, unlimited ideas, and untiring zeal.
+
+Cheers,
+Team EDC
                         """, 
-                        'pitchers@edctiet.com',
+                        'esummit@edctiet.com',
                         [email],
                     )
 			return redirect('subscribe')

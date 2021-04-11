@@ -25,7 +25,7 @@ SECRET_KEY = 'ex$snlsm@9!$n-ey#0az6bqzca+)5m)ns1jz=_0ov^s674h2!p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['esummit2021.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['esummit2021.herokuapp.com','127.0.0.1','esummit.edctiet.com']
 
 
 # Application definition
@@ -130,5 +130,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'queries.edctiet@gmail.com'
-EMAIL_HOST_PASSWORD = 'eczqtysruacoqqob'
-DEFAULT_FROM_EMAIL = 'pitchers@edctiet.com'
+EMAIL_HOST_PASSWORD = 'slchvuqpyjnvfpzv'
+DEFAULT_FROM_EMAIL = 'esummit@edctiet.com'
