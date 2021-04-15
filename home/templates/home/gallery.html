@@ -1,0 +1,406 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>E-Summit</title>
+
+	<link rel="icon" href="{% static 'home/img/favicon.ico' %}">
+
+<link rel="stylesheet" href="{% static 'home/style.css' %}">
+
+<style type="text/css">
+	body {
+	    background-color: #434c50;
+	    min-height: 100vh;
+	    font: normal 16px sans-serif;
+	    padding: 0 0;
+	}
+
+	.container.gallery-container {
+	    background-color: #fff;
+	    color: #35373a;
+	    min-height: 100vh;
+	    padding: 30px 50px;
+	}
+
+	.gallery-container h1 {
+	    text-align: center;
+	    margin-top: 50px;
+	    font-family: 'Droid Sans', sans-serif;
+	    font-weight: bold;
+	}
+
+	.gallery-container p.page-description {
+	    text-align: center;
+	    margin: 25px auto;
+	    font-size: 18px;
+	    color: #999;
+	}
+
+	.tz-gallery {
+	    padding: 40px;
+	}
+
+	/* Override bootstrap column paddings */
+	.tz-gallery .row > div {
+	    padding: 2px;
+	}
+
+	.tz-gallery .lightbox img {
+	    width: 100%;
+	    border-radius: 0;
+	    position: relative;
+	}
+
+	.tz-gallery .lightbox:before {
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    margin-top: -13px;
+	    margin-left: -13px;
+	    opacity: 0;
+	    color: #fff;
+	    font-size: 26px;
+	    font-family: 'Glyphicons Halflings';
+	    /* content: '\e003'; */
+	    pointer-events: none;
+	    z-index: 9000;
+	    transition: 0.4s;
+	}
+
+
+	.tz-gallery .lightbox:after {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    opacity: 0;
+	    background-color: rgba(255, 255, 0, 0.5);
+	    content: '';
+	    transition: 0.4s;
+	}
+
+	.tz-gallery .lightbox:hover:after,
+	.tz-gallery .lightbox:hover:before {
+	    opacity: 1;
+	}
+	.baguetteBox-button {
+	    background-color: transparent !important;
+	}
+
+	@media(max-width: 768px) {
+	    body {
+	        padding: 0;
+	    }
+	}
+	.navlogo{
+			width: 200px; 
+			height: 150px;
+		}
+
+	@media(max-width: 768px) {
+	    body {
+	        padding: 0;
+	    }
+		.navlogo {
+			width: 195px;
+			height: 130px;
+		}
+	}
+</style>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+
+
+<script type="text/javascript">
+	window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        var gallery = document.getElementById("nav_gallery")
+        console.log(nav_gallery)
+        var contact = document.getElementById("nav_contact")
+        console.log(nav_contact)
+        gallery.classList.remove("active")
+        contact.classList.add("active")
+        console.log("at end")
+    }
+    else{
+        var gallery = document.getElementById("nav_gallery")
+        console.log(nav_gallery)
+        var contact = document.getElementById("nav_contact")
+        console.log(nav_contact)
+        gallery.classList.add("active")
+        contact.classList.remove("active")
+        console.log(" not at end")
+    }
+};
+</script>
+</head>
+<body style=" background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);">
+
+<div id="preloader">
+<div class="loader"></div>
+</div>
+
+
+<header class="header-area">
+	<div class="classy-nav-container breakpoint-off">
+		<div class="container">
+
+			<nav class="classy-navbar justify-content-between" id="conferNav">
+
+				<a class="nav-brand" href="index-2.html"><img src="{% static 'home/img/core-img/esummit.png' %}" alt=""
+						class="navlogo"></a>
+
+				<div class="classy-navbar-toggler">
+					<span class="navbarToggler"><span></span><span></span><span></span></span>
+				</div>
+
+				<div class="classy-menu">
+
+					<div class="classycloseIcon">
+						<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+					</div>
+
+					<div class="classynav">
+						<ul id="nav">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#about">About Us</a></li>
+							<li><a href="#speakers">Speakers</a></li>
+							<li><a href="#schedule">Schedule</a></li>
+							<li><a href="#events">Events</a></li>
+							<li><a href="#faq">FAQs</a></li>
+							<li><a href="#contact">Contact Us</a></li>
+						</ul>
+
+						<!-- <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Know More About Us<i
+								class="zmdi zmdi-long-arrow-right"></i></a> -->
+					</div>
+
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+<section  style="background-image: url(static/home/img/gallery/12.png);" class="breadcrumb-area bg-img bg-gradient-overlay jarallax">
+<div class="container h-100">
+<div class="row h-100 align-items-center">
+<div class="col-12">
+<div class="breadcrumb-content text-center">
+<h2 class="page-title">GALLERY</h2>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+<div class="container gallery-container" style=" background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);">
+
+
+    
+    <div class="tz-gallery">
+
+        <div class="row">
+
+            <div class="col-sm-12 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/1.jpg' %}">
+                    <img src="{% static 'home/img/gallery/1.jpg' %}" alt="Bridge" style="width: 100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/2.jpg' %}">
+                    <img src="{% static 'home/img/gallery/2.jpg' %}" alt="Park" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/3.JPG' %}">
+                    <img src="{% static 'home/img/gallery/3.png' %}" alt="Tunnel" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-12 col-md-8">
+                <a class="lightbox" href="{% static 'home/img/gallery/10.PNG' %}">
+                    <img src="{% static 'home/img/gallery/10.PNG' %}" alt="Traffic" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/5.jpg' %}">
+                    <img src="{% static 'home/img/gallery/5.jpg' %}" alt="Coast" style="height:  100%;">
+                </a>
+            </div> 
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/4.JPG' %}">
+                    <img src="{% static 'home/img/gallery/4.JPG' %}" alt="Rails" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/7.JPG' %}">
+                    <img src="{% static 'home/img/gallery/7.JPG' %}" alt="Rails" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/8.JPG' %}">
+                    <img src="{% static 'home/img/gallery/8.JPG' %}" alt="Rails" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-4">
+                <a class="lightbox" href="{% static 'home/img/gallery/6.jpg' %}">
+                    <img src="{% static 'home/img/gallery/6.jpg' %}" alt="Rails" style="height:  100%;">
+                </a>
+            </div>
+            <div class="col-sm-6 col-md-8">
+                <a class="lightbox" href="{% static 'home/img/gallery/12.png' %}">
+                    <img src="{% static 'home/img/gallery/12.png' %}" alt="Rails" style="height:  100%;">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>
+
+
+
+
+
+
+
+
+
+<footer id="contact" class="footer-area bg-img bg-overlay-2 section-padding-100-0">
+
+	<div class="main-footer-area">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-12 col-sm-6 col-lg-6">
+					<div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+
+						<!-- <a href="#" class="footer-logo"><img src="img/core-img/logo.png" alt=""></a> -->
+						<h5 class="widget-title">About Us</h5>
+						<p> EDC, TIET has been established with an aim to foster and nurture talented young minds
+							with a vision. We believe that entrepreneurship is the key to unlock India's talent and
+							untapped potential and thus we are striving to create, foster and promote
+							entrepreneurship.
+						</p>
+
+						<div class="social-info">
+							<a target="_blank" href="https://www.linkedin.com/school/entrepreneurship-development-cell-thapar-university/"><i class="zmdi zmdi-linkedin"></i></a>
+							<a target="_blank" href="https://www.instagram.com/edc_tiet/"><i class="zmdi zmdi-instagram"></i></a>
+							<a target="_blank" href="https://www.facebook.com/tuedcell/"><i class="zmdi zmdi-facebook"></i></a>
+							<a target="_blank" href="https://mobile.twitter.com/edctiet"><i class="zmdi zmdi-twitter"></i></a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-lg-4">
+					<div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+
+						<h5 class="widget-title">Contact</h5>
+
+						<div class="footer-contact-info">
+							<p><i class="zmdi zmdi-map"></i><a style="color: #9293bc;" href="https://g.page/ThaparInstitute?share" target="_blank"> Thapar Institute of Engineering<br> and Technology,
+								Patiala</a> </p>
+							<p><i class="zmdi zmdi-phone"></i> Nishant Gupta: <a style="color: #9293bc;" href="tel:8859014946">+91 88590 14946</a></p>
+							<p><i class="zmdi zmdi-phone"></i> Prachi Singhroha: <a style="color: #9293bc;" href="tel:7988188907">+91 79881 88907</a></p>
+							<p><i class="zmdi zmdi-email"></i><a href="mailto:tuedcell@gmail.com"
+									style="color: #9293bc">esummit@edctiet.com</a></p>
+							<p><i class="zmdi zmdi-globe"></i><a href="https://www.edctiet.com"
+									style="color: #9293bc;">www.edctiet.com/</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-lg-2">
+					<div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
+
+						<h5 class="widget-title">Events</h5>
+
+						<ul class="footer-nav">
+							<li><a href="#">UNWIND</a></li>
+							<li><a href="#">ELEVATE</a></li>
+							<li><a href="#">INTERNSHIP FAIR</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="copywrite-content">
+			<div class="row">
+
+				<div class="col-12 col-md-12">
+					<div class="copywrite-text">
+						<p>
+							Copyright &copy;
+							<script data-cfasync="false"
+								src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+							<script>document.write(new Date().getFullYear());</script> All rights reserved | This
+							website is made
+							with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
+								href="https://www.edctiet.com/" target="_blank">Technical Team, EDC-TIET</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script>
+	$('a[onclick]').each(function(){
+	  $(this).data('onclick', this.onclick);
+  
+	  this.onclick = function(event) {
+		if($(this).attr('disabled')) { // HERE
+		  return false;
+		};
+  
+		$(this).data('onclick').call(this, event || window.event);
+	  };
+	});
+</script>
+<script src="{%static 'home/js/jquery.min.js' %}"></script>
+
+	<script src="{%static 'home/js/popper.min.js' %}"></script>
+
+	<script src="{%static 'home/js/bootstrap.min.js' %}"></script>
+
+	<script src="{%static 'home/js/confer.bundle.js' %}"></script>
+
+	<script src="{%static 'home/js/default-assets/active.js' %}"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+</html>
