@@ -1,7 +1,7 @@
 from .models import *
 from django import forms
 
-class EmailForm(forms.ModelForm):
+class RegisterForm(forms.ModelForm):
 	class Meta():
-		model = Subscriber
-		fields = ['email']
+		model = Register
+		fields = ['name','contact_no','email','thapar_student','unwind_interested','elevate_interested','bootcamp_interested']
